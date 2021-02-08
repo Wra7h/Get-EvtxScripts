@@ -5,7 +5,7 @@ function Get-EvtxScripts(){
     Created By: Twitter: @_Wra7h, Github: Wra7h
 
     .SYNOPSIS
-    Rebuild Unique scripts from a Microsoft-Windows-PowerShell/Operational's 4104s
+    Rebuild unique scripts/modules from a Microsoft-Windows-PowerShell/Operational's 4104s
 
     .PARAMETER Log
     Specify a Microsoft-Windows-PowerShell/Operational log not stored in C:\Windows\System32\winevt\Logs.
