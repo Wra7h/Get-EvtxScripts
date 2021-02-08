@@ -11,7 +11,7 @@ function Get-EvtxScripts(){
     Specify a Microsoft-Windows-PowerShell/Operational log not stored in C:\Windows\System32\winevt\Logs.
 
     .PARAMETER Output
-    Specify the directory to send the scripts
+    Specify the directory to send the scripts. The output directory will be created if it doesn't already exist.
     
     .EXAMPLE
     Get-EvtxScripts -Output .\testfolder
