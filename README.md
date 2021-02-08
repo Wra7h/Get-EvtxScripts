@@ -1,6 +1,6 @@
 # Get-EvtxScripts
 
-NOTE: There's probably a better alternative out there somewhere, but this is here. 
+NOTE: There's probably a better alternative out there somewhere, but this is here if you choose to use it. 
 
 Get-EvtxScripts creates a list of unique ScriptBlock IDs from 4104 Events. Then it will iterate through each event to identify the messages related to that ID, 
 and rebuild each script in the correct order.
