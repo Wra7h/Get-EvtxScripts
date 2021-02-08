@@ -28,7 +28,7 @@ function Get-EvtxScripts(){
  
     if (!(test-path $Output)){
         Write-host "`r`n[*] Creating $output" -ForegroundColor Yellow
-        New-Item $Output -ItemType Directory -ea 0
+        New-Item $Output -ItemType Directory -ea 0 | Out-Null
 
     }
 
