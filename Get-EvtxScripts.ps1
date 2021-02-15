@@ -60,15 +60,22 @@ function Get-EvtxScripts(){
         $n=1
         $ScriptBlockCount = $scriptIds | Group-Object | ? Name -eq $id | select -ExpandProperty Count
         $scriptset = $4104s | ? {($_.Message -match ".*\ of\ $ScriptBlockCount") -and ($_.Message -match ".*$id.*")}
+        $totalmessage=""
         for ($i=1;$i -le $ScriptBlockCount;$i++){
             Write-Progress -Activity ("Building: $id.ps1 (Script $idcount of "+($scriptIds | sort -Unique).Count +")") -Status "Added block $n of $ScriptBlockCount" -PercentComplete (($n/$ScriptBlockCount)*100)
             $message = $scriptset | ? {($_.Message -match ".*\($i\ of\ $ScriptBlockCount") -and ($_.Message -match ".*$id.*")} | select -ExpandProperty Message
             if ($message -ne $null){
-                $message = (($message).Split("`r`n")[1..(($message).Split("`r`n").Count - 4)])
-                Add-Content -Value $message "$Output\$id.ps1" -ErrorAction SilentlyContinue
+                if ($totalmessage -eq ""){
+                    $totalmessage = (($message).Split("`r`n")[1..(($message).Split("`r`n").Count - 7)] | Out-String)
+                } elseif($totalmessage -ne ""){                    
+                    $midmessage = (($totalmessage.Split("`r`n")[-3]+($message).Split("`r`n")[2]) | Out-String)
+                    $totalmessage = (($totalmessage -split "`r`n" | select -SkipLast 3 | Out-String) + $midmessage)
+                    $totalmessage += (($message).Split("`r`n")[3..(($message).Split("`r`n").Count - 7)] | Out-String)
+                }    
             }
             $n++
         }
+        Set-Content -Value $totalmessage "$Output\$id.ps1" -ErrorAction SilentlyContinue
         $idcount++
     }
 }
