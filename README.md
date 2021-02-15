@@ -7,3 +7,5 @@ To-Dos:
 ~~These rebuilt scripts and modules won't be fully functioning (working on that now in my free time), but running this will prevent you from manually
 rebuilding the larger files by hand.~~ (Updated 14 Feb 2021)
 
+Updates:  
+- 15 Feb 2021: Added -ScriptBlockID so a user can specify a certain script/scripts to rebuild.
