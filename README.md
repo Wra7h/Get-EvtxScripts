@@ -9,3 +9,5 @@ rebuilding the larger files by hand.~~ (Updated 14 Feb 2021)
 
 Updates:  
 - 15 Feb 2021: Added -ScriptBlockID so a user can specify a certain script/scripts to rebuild.
+
+If you have any questions, please don't hesitate to reach out. You can find me on Twitter @\_Wra7h. I don't post much, but I lurk and DM.
