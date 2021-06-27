@@ -6,8 +6,7 @@ and rebuild each script/module in the correct order.
 ## Basic Usage:  
 PS C:\\> . .\Get-EvtxScripts.ps1  
 PS C:\\> Get-EvtxScripts -Output .\OutDir  
---OR--  
-PS C:\\> Get-EvtxScripts -Output .\OutDir -Log .\Users\User\Desktop\OfflineLogs\Microsoft-Windows-PowerShell%4Operational.evtx  
+
 
 ## Specifying ScriptBlock IDs (Optional):  
 1. Command line:  
