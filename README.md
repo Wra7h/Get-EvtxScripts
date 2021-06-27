@@ -5,3 +5,4 @@ and rebuild each script/module in the correct order.
 
 Updates:  
 - 15 Feb 2021: Added -ScriptBlockID so a user can specify a certain script/scripts to rebuild.
+- 26 Jun 2021: Added -JobCount and parallel build to reduce total time required for builds.
