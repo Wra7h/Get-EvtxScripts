@@ -6,7 +6,9 @@ and rebuild each script/module in the correct order.
 ## Basic Usage:  
 PS C:\\> . .\Get-EvtxScripts.ps1  
 PS C:\\> Get-EvtxScripts -Output .\OutDir  
-
+  
+More Examples:  
+PS C:\\> Get-Help Get-EvtxScripts -detailed  
 
 ## Specifying ScriptBlock IDs (Optional):  
 1. Command line:  
